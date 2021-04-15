@@ -30,7 +30,7 @@ class MegaSdkRestClient:
 
 	def getDownloadInfo(self, gid):
 		res = self.session.get(constructUrl(self.base_endpoint, RoutePath.PATH_DL_INFO.format(gid))).json()
-		return checkAndRaise(res, RoutePath.PATH_DL_INFO)
+		return checkAndRaise(res, 'dlinfo')
 
 	def ping(self):
 		res = self.session.get(constructUrl(self.base_endpoint, RoutePath.PATH_PING)).json()

@@ -5,8 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="megasdkrestclient",
-    packagaes=["megasdkrestclient"],
-    version=version,
+    version="0.1",
     description="MegaSDK-REST python wrapper",
     long_description=long_description,
     long_description_content_type="text/markdown",

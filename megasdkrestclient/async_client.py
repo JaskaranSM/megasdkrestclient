@@ -34,7 +34,7 @@ class AsyncMegaSdkRestClient:
     async def getDownloadInfo(self, gid):
         async with self.session.get(constructUrl(self.base_endpoint, RoutePath.PATH_DL_INFO.format(gid))) as res:
             res_json = await res.json()
-            return checkAndRaise(res_json, RoutePath.PATH_DL_INFO)
+            return checkAndRaise(res_json, 'dlinfo')
 
     async def ping(self):
         async with self.session.get(constructUrl(self.base_endpoint, RoutePath.PATH_PING)) as res:
